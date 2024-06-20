@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employee={
+            calcTax(){
+                document.write("tax is 10%");
+            }
+        };
+
+        const PrabhatKC={
+            salary:50000
+        };
+
+        PrabhatKC.__proto__=employee;
+        PrabhatKC.calcTax();
+    </script>
+</body>
+</html>
