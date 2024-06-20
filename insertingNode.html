@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            List
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+
+        </ul>
+    </div>
+    <h2>this is heading 2.</h2>
+    <script>
+        let heading=document.querySelector("h2");
+        let btn=document.createElement("button");
+        btn.innerText="click here";
+        let div=document.querySelector("div");
+        div.style.backgroundColor="green";
+//append adds element to the last of the element
+        div.append(btn);
+
+        //prepend adds element to the starting of the element
+        div.prepend(btn);
+
+        //before adds new element just before the selected element
+        heading.before(btn);
+
+        //after adds new element just after the selected element
+        heading.after(btn);
+            </script>
+</body>
+</html>

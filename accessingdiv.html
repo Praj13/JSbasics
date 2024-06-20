@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myClass"></div>
+    <div class="myClass"></div>
+    <div class="myClass"></div>
+ 
+</body>
+<script>
+    // document.querySelector("body").firstChild.textContent="hello world";
+    // document.querySelector("body").children[1].textContent="hello earth";
+    // document.querySelector("body").children[2].textContent="hello planet";
+
+    let divs=document.querySelectorAll(".myClass");
+    let idx=1;
+    for(div of divs){
+        div.innerText=`he is hero number ${idx}`;
+        // div.innerText="he is hero number"+idx;
+
+        idx++;
+
+
+    }
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="change">Change theme</button>
+    <script>
+        let btn=document.querySelector("#change");
+    let whole=document.querySelector("body");
+    let currTheme="light"
+        btn.addEventListener("click",()=>{
+            if(currTheme=="light"){
+                currTheme="dark";   
+            whole.style.backgroundColor="black";
+        }
+    else{
+        currTheme="light";
+        whole.style.backgroundColor="white";
+
+    }})
+    </script>
+</body>
+</html>
