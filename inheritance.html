@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class vehicle{
+            
+            constructor(brand){
+                this.brand=brand;
+                document.write("its brand name is "+this.brand+"<br>");
+            }
+            start(){
+                document.write("vehile started"+"<br>");
+            }
+        }
+
+        class Toyota extends vehicle{
+        }
+        let fortuner=new Toyota("fortuner");
+        fortuner.start();
+
+
+        //anothe example
+
+        class Person{
+            
+            sleep(){
+                document.write("a person sleeps"+"<br>");
+            }
+            eat(){
+                document.write("a person eats"+"<br>");
+            }
+        }
+
+        class Prajwol extends Person{
+            code(){
+                document.write("he codes");
+            }
+        }
+
+        let Praj=new Prajwol();
+        Praj.sleep();
+        Praj.eat();
+        Praj.code();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //constructor is automatically called when an object is initialized.
+        class Toyota{
+            constructor(brand, mileage){
+                this.brand=brand;
+                this.mileage=mileage
+                document.write(`its name is ${brand} and has mileage of ${mileage} <br>`);
+            }
+            start(){
+                document.write("vehicle started"+"<br>");
+            }
+            stop(){
+                document.write("vehicle stopped"+"<br>");
+            }
+            vName(brand){
+                this.brand=brand;
+                document.write(brand);
+            }
+        }
+
+        //creating objects
+        let  fortuner=new Toyota("fortuner",15);
+        let  hilux=new Toyota("hilux",16);
+
+    </script>
+</body>
+</html>
