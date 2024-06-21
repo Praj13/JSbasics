@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class vehicle{
+            constructor(brand){
+                this.brand=brand;
+            }
+            start(){
+                document.write("vehice started");
+            }
+        }
+
+        class car extends vehicle{
+            constructor(brand,model){
+                super(brand);  //to invoke parent class constructor
+                this.model=model;
+                document.write("brand name is "+brand+" and model is "+model);  
+               
+            }
+           
+        }
+
+            let fortuner=new car("toyota","hilux");
+
+            class car2 extends vehicle{
+                constructor(brand){
+                    super();
+                    // this.brand=brand;
+                    document.write("the brand name is "+brand);
+                }
+                work(){
+                    super.start();
+                }
+            }
+
+            let wagon=new car2("Gwagon");
+            wagon.work();
+    </script>
+</body>
+</html>
