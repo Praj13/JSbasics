@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Toyota{
+            start(){
+                document.write("vehicle started"+"<br>");
+            }
+            stop(){
+                document.write("vehicle stopped"+"<br>");
+            }
+            vName(brand){
+                this.brand=brand;
+                document.write(brand);
+            }
+        }
+
+
+        //creating object
+        let fortuner=new Toyota();
+        fortuner.vName("fortuner");
+        fortuner.stop();
+
+        let hilux=new Toyota();
+        hilux.vName("hilux");
+        hilux.start();
+        hilux.stop();
+
+    </script>
+</body>
+</html>
