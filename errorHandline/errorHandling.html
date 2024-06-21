@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class CustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "CustomError";
+  }
+}
+
+function fetchDataFromAPI(apiUrl) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Simulate different types of errors
+      const randomErrorType = Math.floor(Math.random() * 3);
+      if (randomErrorType === 0) {
+        reject(new CustomError("Custom error occurred."));
+      } else if (randomErrorType === 1) {
+        reject(new Error("General error occurred."));
+      } else {
+        resolve({ data: "API data" });
+      }
+    }, 1000);
+  });
+}
+
+async function processData(apiUrl) {
+  try {
+    console.log("Fetching data from API...");
+    const response = await fetchDataFromAPI(apiUrl);
+    console.log("Data received:", response.data);
+
+    // Simulate processing the data
+    if (response.data === "API data") {
+      throw new Error("Error processing data.");
+    }
+
+    console.log("Data processed successfully.");
+  } catch (error) {
+    if (error instanceof CustomError) {
+      console.error(`CustomError caught: ${error.message}`);
+    } else {
+      console.error(`Error caught: ${error.message}`);
+    }
+  } finally {
+    console.log("Cleaning up resources...");
+  }
+}
+
+processData("https://example.com/api");
+
+
+    </script>
+</body>
+</html>
