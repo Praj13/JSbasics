@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback simply means passing a function as an argument to another function
+
+        function sum(a,b){
+            document.write(a+b);
+        }
+
+        function calculator(a,b,sumCallBack){
+            sumCallBack(a,b);
+        }
+
+        calculator(2,3,sum);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        document.write("before setTimeout");
+        function Add(){
+            let a=6;
+            let b=6;
+            let sum =a + b;
+            document.write(sum);
+        }
+        setTimeout(Add,3000);
+
+        //or
+
+        setTimeout(() => {
+            let a=6;
+            let b=6;
+            let sum =a + b;
+            document.write(sum);
+        
+            
+        }, 4000);
+
+
+        document.write("after setTimeout");
+
+    </script>
+</body>
+</html>
