@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+//callBack hell is a nested callback stacked over one another forming a pyramid structure 
+//this style of programming becomes difficult to understand and manage. 
         function getData(dataId,getNextData){
             setTimeout(()=>{
                 document.write("data",dataId);
@@ -15,8 +17,16 @@
         }
 
          getData(1,()=>{
+            document.write("getting data2")
             getData(2,()=>{
-                getData(3);
+            document.write("getting data3")
+                getData(3),()=>{
+            document.write("getting data4")
+                    getData(4,()=>{
+            document.write("getting data5")
+                        getData(5)
+                    })
+                };
             })
 
         })
