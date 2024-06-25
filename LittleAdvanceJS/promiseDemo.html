@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //romises in JavaScript are used to handle asynchronous operations, providing a more manageable and readable way to deal with tasks like API calls, file reading, and other operations that take time to complete.
+
+        function getData(dataId){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    console.log("data",dataId);
+                    resolve("success");
+                }, 5000);
+            })
+        }
+    </script>
+</body>
+</html>
