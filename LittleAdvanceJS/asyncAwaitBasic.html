@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function api(weatherID){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    console.log("weather data",weatherID);
+                resolve(200);
+                }, 2000);
+                
+            });
+        }
+
+
+        async function weather(){
+            await api(11);
+            await api(22);
+
+        };
+        weather();
+
+
+        //or we can use self invoked function so that we dont need to call the function for the execution.
+     //IIFE immediatedly invoked function expression
+        ( async ()=>{
+            await api(11);
+            await api(33);
+
+        })();
+
+
+
+        //syntax of self invoked funciton;
+       ( ()=>{
+            console.log("hello");
+        })();
+
+        // weather();
+    </script>
+</body>
+</html>
