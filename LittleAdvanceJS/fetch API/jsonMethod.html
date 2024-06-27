@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="btn">Click here to check cat facts.</button>
     <p id="para"></p>
     <script>
         //JSON stands for javascript object notation
@@ -14,7 +15,38 @@
 
         const URL="https://cat-fact.herokuapp.com/facts";
 
-const getFacts=(async ()=>{
+// const getFacts=(async ()=>{
+//     console.log("fetching data");
+//     let response=await fetch(URL); //here response is the promise returned by the API
+//     console.log(response);
+//     console.log(response.status);
+//     let data=await response.json();
+//     console.log(data);
+//     console.log(data[0]);
+//     console.log(data[0].text);
+//     let data2=data[0].text;
+
+   
+
+//     let btn1=document.querySelector("#btn");
+//     let para=document.querySelector("#para");
+//     btn1.addEventListener("click",()=>{
+//     para.innerText=data2;
+
+//     })
+
+
+// })();
+
+
+
+//or
+
+let btn1=document.querySelector("#btn");
+let para=document.querySelector("#para");
+
+
+const getFacts=async ()=>{
     console.log("fetching data");
     let response=await fetch(URL); //here response is the promise returned by the API
     console.log(response);
@@ -25,11 +57,13 @@ const getFacts=(async ()=>{
     console.log(data[0].text);
     let data2=data[0].text;
 
-    let para=document.querySelector("#para");
     para.innerText=data2;
 
+};
 
-})();
+
+btn1.addEventListener("click",getFacts);
+
 
 
 
